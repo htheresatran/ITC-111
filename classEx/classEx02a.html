@@ -9,7 +9,6 @@
 
         <script></script>
     </head>     
-
     
     <body>
          <!-- Headings -->
@@ -24,7 +23,6 @@
         <br>
        
         <!-- Paragraph -->
-
         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. <strong>Asperiores distinctio deleniti hic, provident fugit ullam rerum dolorem odio facilis mollitia, </strong> sint quod ipsum. <em>Incidunt eaque non ad,</em> adipisci placeat ullam!</p>
 
         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores distinctio deleniti hic, provident fugit ullam rerum dolorem odio facilis <a href="http://google.com" target="_blank">mollitia</a>, sint quod ipsum Incidunt eaque non ad, adipisci placeat ullam!</p>
@@ -47,7 +45,77 @@
             <li>Item 4</li>
         </ol>
        
+        <!-- Tables -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Some Body</td>
+                    <td>somebody@someaddress.com</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>Any Body</td>
+                    <td>anybody@someaddress.com</td>
+                    <td>93</td>
+                </tr>
+                <tr>
+                    <td>Every Body</td>
+                    <td>everybody@someaddress.com</td>
+                    <td>75</td>
+                </tr>  
+            </tbody>
+        </table>
        
+        <!-- Forms -->
+        <form action="somephppage.php" method="POST">
+            <div>
+                <label>First Name:</label>
+                <input type="text" name="firstName" placeholder="Enter first name.">
+            </div>
+            <div>
+                <label>Last Name:</label>
+                <input type="text" name="lastName" placeholder="Enter last name.">
+            </div>
+            <div>
+                <label>Email:</label>
+                <input type="email" name="email" placeholder="Enter email address.">
+            </div>
+            <div>
+                <label>Message:</label>
+                <textarea name="message"></textarea>
+            </div>
+            <div>
+                <label>Gender:</label>
+                  <select name="gender">
+                    <option vaue="male">Male</option>
+                    <option vaue="female">Female</option>
+                  </select>
+            </div>
+            <div>
+                <label>Age:</label>
+                <input type="number" name="age" placeholder="Enter your age.">
+            </div>
+            <div>
+                <label>Birthday:</label>
+                <input type="date" name="birthday" placeholder="Choose your birthday.">
+            </div> 
+                <input type="submit" name="submit" value="Submit">
+        </form>
+
+        <br>
+        <hr>
+        <br>
+
+        <!-- Image -->
+        <img src="Chess.jpg">
+
          <div style="margin-top: 1000px;"></div>
     </body>
 </html>
