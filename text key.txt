@@ -1,0 +1,2 @@
+&copy;      copy symbol
+#eeeeee     pick any color on a gradien t
