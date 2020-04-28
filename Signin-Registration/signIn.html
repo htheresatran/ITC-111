@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign in</title>
+    <style>
+        .container{
+            border: 1px #000000 solid;
+            background-color: #f7f7f7;
+            border-radius: 15px;
+            width: 20%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #mainHeader {
+            background-color: green;
+            text-align: center;
+            color: black
+            padding: 10px;
+
+        }
+        #form {
+            margin: 0 auto;
+            text-align: center;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+            <header id="mainHeader">
+                Need an account?
+                <a href="register.html">Register</a>
+            </header>
+            <section>
+                <form action="formsphp.php" method="POST">
+                        <div id="form">
+                            <div id="label">
+                                <label>Username</label>
+                            </div>
+                            <input type="text" name="username">
+                            <br>
+                            <div id="label">
+                                <label>Password</label>
+                            </div>
+                            <input type="password" name="password">
+                            <br>
+                            <br>
+                            <div>
+                                <a href="#">Forgot username or passwprd</a>
+                                <br>
+                                <input type="submit" name="submit">
+                            </div>
+                            </div>
+                        </div>
+                </form>
+            </section>
+    </div>
+</body>
+</html>
