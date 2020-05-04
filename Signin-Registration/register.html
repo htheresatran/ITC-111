@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+         <header id="mainHeader">
+             Have an account?
+             <a href="signIn.html"> Login</a>
+         </header>  
+         
+         <section>
+             <form onsubmit="alert('Submit'); return false">
+                <div id="formData">
+                    <div class="Label">
+                        <label>Name</label><br>
+                        <input type="text" name="firstName" placeholder="Enter first name">
+                        <input type="text" name="lastName" placeholder="Enter last name">
+                    </div>
+                   
+                    <div class="Label">
+                        <label>Age</label><br>
+                        <input type="number" name="age" id="age">    
+                    </div>
+
+                    <div class="Label">
+                        <label>Email</label><br>
+                        <input type="email" name="eMail" placeholder="Enter email address">&nbsp;   
+                        <input type="email" name="eMail" placeholder="Confirm email address">
+                    </div>
+
+                    <div class="Label">
+                        <label>Username</label><br>
+                        <input type="text" name="userName" placeholder="Enter a username">
+                    </div>
+
+                    <div class="Label">
+                        <label>Password</label><br>
+                        <input type="text" name="Password" placeholder="Enter password">&nbsp;
+                        <input type="text" name="Password" placeholder="Confirm password">
+                    </div>
+                    <br>
+
+                    <input type="submit" name="submit"></input>
+
+                </div>
+                <br>
+            </form>
+         </section>
+    </div>
+</body>
+</html>
