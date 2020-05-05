@@ -1,0 +1,37 @@
+div{
+    margin: 0 auto;
+    width: 70%;
+}
+p{
+    margin: 10 px;
+}
+.center{
+    margin: 10%;
+    height: 50px;
+    text-align: center;
+}
+header, nav, footer {
+    text-align: center;
+}
+main {
+    margin: auto;
+    height: 260px;
+    background-color: rgb(108, 196, 147);
+    overflow: hidden;
+}
+nav, footer{
+    background: rgb(196, 248, 196);
+    color: black;
+}
+section.left {
+    text-align: center 0;
+    height: 260px;
+    background-color: rgb(228, 253, 191);
+    float: left;
+    width: 200px;
+    height: 260px;
+}
+ul{
+    margin-left:-40px;
+    list-style-type: none;
+}
