@@ -23,7 +23,10 @@ nav, footer{
     background: rgb(196, 248, 196);
     color: black;
 }
-section.left {
+#LinkDetail {
+
+}
+section.leftSide {
     text-align: center 0;
     height: 260px;
     background-color: rgb(228, 253, 191);
