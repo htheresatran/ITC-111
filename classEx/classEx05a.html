@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Class Exercise 05a</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            overFlow: hidden;
+            background-color: rgb(178, 178, 224);
+        }
+        li a:hover {
+            background-color: chartreuse;
+        }
+    </style>
+    <script>
+        function clickFunction(){
+            //alert('reached');
+            document.getElementById('innerDivBodyLeft').innerHTML = "new text";
+        }
+    </script>
+</head>
+
+<body>
+    <div id ='outerDiv'>
+        <div id = 'innerDivHead'> </div>
+            <ul>
+                <li>
+                    <a href="#" onclick="clickfunction()">Click me</a>
+                </li>
+            </ul>
+        <div id = 'innerDivBodyLeft'> </div>
+        <div id = 'innerDivBodyRight'> </div>
+
+
+
+    </div>
+
+</body>
+</html>

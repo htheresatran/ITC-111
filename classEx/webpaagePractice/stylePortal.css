@@ -3,7 +3,7 @@ div{
     width: 80%;
     text-align: center;
 }
-header, nav, footer {
+.header, nav, footer {
     padding: 10px;
 }
 main {
@@ -25,11 +25,11 @@ nav, footer{
     width: 200px;
     height: 260px;
 }
-#LinkDetail {
+LinkDetail {
     text-align: center
 
 }
-ul{
+.ul{
     text-align: left;
     margin-left:-35px;
     list-style-type: none;
