@@ -1,0 +1,18 @@
+
+body {
+    background-image: url("pool.jpg"); 
+    margin: 50px auto;
+    text-align:center;
+
+}#header{
+    margin:50px;
+    background-color: rgb(157, 214, 224);
+
+}.center{
+    background-color: white;
+    text-align: center;
+    margin: 10px auto;
+}
+img {
+    width: 50%;
+}

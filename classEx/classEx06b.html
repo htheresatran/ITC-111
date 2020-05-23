@@ -1,74 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Class Exercise 05a</title>
-    <style>
-        ul {
-            background-color: #333333;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-        li, a {
-            display: block;
-            color: white;
-            padding: 16px;
-        }
-        li a:hover{
-            background-color: #111111;
-        }
-        li {
-            float: left;
-        }
-        #outerDiv {
-            margin: 0 auto;
-            width: 75%;
-            overflow: hidden;
-        }
-        #innerDivBodyLeft, #innerDivBodyRight{
-            float:left;
-            height: 500px;
-        }
-        #innerDivBodyLeft{
-            background-color: cadetblue;
-            width: 20%;
-        }
-        #innerDivBodyRight{
-            background-color: blue;
-            width: 80%;
-        }
-        .visble{
-            display: block;
-        }
+<title>Class Exercise 06b</title>
+<style>
+/*
+This style will contol the look of ul elements on the page.
+*/
+ul {
+background-color: #333333;
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+}
+/*
+This style floats 'li' elements to the left.
+*/
+li {
+float: left;
+}
+/*
+This effects 'display', 'color' and 'padding' of both 'li' and
+'a' elements individually.
+*/
+li, a {
+display: inline-block;
+color: white;
+padding: 16px;
+}
+/*
+This style effects the 'background-color' of only an 'a' element
+that is inside of 'li' elements, based on the cursors hover state.
+*/
+li a:hover {
+background-color: #111111;
+}
+/*
+This style effects the element with the id of #outerDiv.
+*/
+#outerDiv {
+margin: 0 auto;
+width: 75%;
+overflow: hidden;
+}
+/*
+This style aligns 2 of the inner div's to the left */
+#innerDivBodyLeft, #innerDivBodyRight{
+float:left;
+height: 500px;
+}
+/*
+This style effects the element with the id of #innerDivBodyLeft.
+*/
+#innerDivBodyLeft{
+background-color: cadetblue;
+width: 20%;
+}
+/*
+This style effects the element with the id of #innerDivBodyRight.
+*/
+#innerDivBodyRight{
+background-color: blue;
+width: 80%;
+}
+</style>
+<script>
+/*
+This function is called by the links in the nav area of the page.
+The function creates 2 links and places them into the teal colored div.
+The text in the blue div is also changed.
+*/
+function changeLinkText(){
+// this statement calls the document.getElementById() method to add some html into
+// some other html. The document.getElementById() method call is used to target an
+// within a document based on its id. The div with the id of 'divLeft' has these new
+// links placed in it's innerHTML. After being created 'onclick' each link also calls
+// a function when their 'onclick' event attribute is triggered attribute
+document.getElementById('divLeft').innerHTML = '<a href="#" onclick="changeDivRightText("link1")">Link 1a</a><br><a href="#" onclick="changeDivRightText("link2")">Link 1b</a>';
+// The innerHTML of the div to the right is also changed
+document.getElementById('divRight').innerHTML = 'Content for the "Link 1" link.';
+// Any of an elements properties can be changed this way. Here the color is changed.
+document.getElementById('divRight').style.color = 'red';
+}
+ 
 
-    </style>
-    <script>
-        function changeText(txt){
-            //alert(txt);
-            document.getElementById('innerDivBodyLeft').innerHTML = '<a href="#" onclick="newFunction()"> New Link</a>';
-            document.getElementById('innerDivBodyRight').innerHTML = "Some New Text";
-        }
-    </script>
+/*
+This function changed the text displayed by an element/tag. It takes a parameter 'txt'
+that is used to control what text to display depending on which link is clicked. This
+function is called whenever the text in the right div element needs to be changed.
+*/
+function changeDivRightText(txt){
+// the 'if' condition sets the text to display if Link 1a is clicked
+if(txt == 'link1') {
+document.getElementById('divRight').innerHTML = 'Content from Link 1a';
+// the 'else if' condition sets the text to display if Link 1b is clicked
+} else if (txt == 'link2') {
+document.getElementById('divRight').innerHTML = 'Content from Link 1b';
+// the 'else' is the text to display by default
+} else {
+document.getElementById('divRight').innerHTML = 'Content loaded when default link is clicked';
+}
+}
+</script>
+ 
 
 </head>
 <body>
-    <div id='outerDiv'>
-        <div>
-            <ul>
-                <li>
-                    <a href="#" onclick='changeText("link1")'>Link 1</a>
-                </li>
-                <li>
-                    <a href="#">Link 2</a>
-                </li>
-            </ul>
-        </div>
+<!--
+This div tag with the id 'outerDiv' is used to contain
+the rest of the page. I can use this div to control the
+overall placing of the elements on the page.
+-->
+<div id='outerDiv'>
+ 
 
-        <div id='innerDivBodyLeft'>Some Link</div>
-        <div id='innerDivBodyRight'>
-            <p id='textDivRight'>Content goes here when link is clicked</p>
-        </div>
-    </div>
+<!--
+This div could easly have been a section or aside tag
+as it is being used to layout other elements of the page.
+-->
+<div>
+<!--
+Here we have an un-ordered list to group our links
+as indivitual line items horizontally.
+-->
+<ul>
+<li>
+<!--
+This link is calling a function that is in our script tag.
+'onclick' is an event attribute. All tags can use the onclick
+attriute.
+-->
+<a href="#" onclick='changeLinkText()'>Link 1</a>
+</li>
+<li>
+<a href="#" onclick='changeColor()'>Link 2</a>
+</li>
+</ul>
+</div>
+<!--
+This div could easly have been a section or aside tag
+as it is being used to layout other elements of the page.
+-->
+<div id='innerDivBodyLeft'>
+<a href='#' id='divLeft' onclick='changeDivRightText()'>Default Page Load Link</a>
+</div>
+<!--
+This div is lined up right next to the previous one. CSS is used to align it
+to the left. Div's would normaly stack as they are block elements.
+-->
+<div id='innerDivBodyRight'>
+<a href="#" id='divRight'>Content loaded in div on page load by default.</p>
+</div>
+</div>
+ 
+
 </body>
 </html>
