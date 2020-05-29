@@ -6,20 +6,26 @@
 function changeLinkText(lnk) {
     // Condition checks which link was click by passing value to the 'lnk' variable
     // the visibility of the corresponding div is updated accordingly. 
-    if(lnk == "ce") {
+    if(lnk == "classEx") {
         document.getElementById('divLeftDefault').style.display = "none";
         document.getElementById('divLeft_CELinks').style.display = "block";
         document.getElementById('divLeft_ALinks').style.display = "none";
-        document.getElementById('divRight').style.display = "none";
+        document.getElementById('divRight').innerHTML = "Default content";
         document.getElementById('ls_Heading').innerHTML = "Class Exercises";
         document.getElementById('rs_Heading').innerHTML = "Exercise Description";
-    }else if (lnk == 'a'){
+    }else if (lnk == 'assign'){
         document.getElementById('divLeftDefault').style.display = "none";
         document.getElementById('divLeft_CELinks').style.display = "none";
         document.getElementById('divLeft_ALinks').style.display = "block";
-        document.getElementById('divRight').style.display = "none";
+        document.getElementById('divRight').innerHTML = "Default content";
         document.getElementById('ls_Heading').innerHTML = "Assignments";
         document.getElementById('rs_Heading').innerHTML = "Assignment Brief";
+    
+    }else if (lnk == 'home'){
+        document.getElementById('divLeftDefault').style.display = "block";
+        document.getElementById('divLeft_CELinks').style.display = "none";
+        document.getElementById('divLeft_ALinks').style.display = "none";
+        document.getElementById('divRight').innerHTML = "Default text deplayed";
     
     }else{
         document.getElementById('divLeftDefault').style.display = "block";
