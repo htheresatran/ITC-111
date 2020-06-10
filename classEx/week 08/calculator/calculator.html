@@ -17,8 +17,8 @@
         </div>
         <!-- button rows-->
         <div class ="row">
-            <button type="submit" name="sqrt" value="√" onclick="loadDisplay(this)">&radic;</button>
-            <button type="submit" name="pow" value="pow" onclick="loadDisplay(this)">x&sup2;</button>
+            <button type="submit" name="sqrt" value="√" onclick="setOperator(this)">&radic;</button>
+            <button type="submit" name="pow" value="pow" onclick="setOperator(this)">x&sup2;</button>
             <button type="submit" name="backspace" value="⌫" onclick="delFromRight(this)">⌫</button>
             <button type="submit" name="div" value="/" onclick="setOperator(this)">/</button>
         </div>
@@ -44,7 +44,7 @@
             <button type="submit" name="clear" value="C" onclick="clearDisplay(this)">C</button>
             <button type="submit" name="zero" value="0" onclick="loadDisplay(this)">0</button>
             <button type="submit" name="point" value="." onclick="loadDisplay(this)">.</button>
-            <button type="submit" name="equal" value="=" onclick="loadDisplay(this)">=</button>
+            <button type="submit" name="equal" value="=" onclick="doMath(this)">=</button>
         </div>
 
     </div>
