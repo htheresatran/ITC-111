@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flash Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="center" id="main">
+       
+        <!--Header/Control Section Start-->
+            <header>
+                <h3 class="center">Flash Card</h3>
+            </header>
+        <!-- Header/Control section End-->
+
+
+        <!--Category Section Start-->
+        <section class="center margin" id="chooseCat">
+            <select id="category" onchange="chgList(this)">
+                <option value="greetings">Greetings</option>
+                <option value="greetings">Body Parts</option>
+                <option value="greetings">Colors</option>
+            </select>
+        </section>
+        <!--Category Section End-->
+
+        <!--Image Display Section Start-->
+        <section class="center margin" id="targetImg">
+            <img src="" alt="">
+            <div class="trgWrd" id="wrd"></div>
+        </section>
+        <!--Image Display Section End-->
+
+        <!--Flip Control Section Start-->
+        <section class="center margin" id="pagination">
+            <!--Previous Button-->
+            <a href="#">
+            <section class="pgBtn center margin" id="prevWord" >
+                <p id="prev" onclick="prvwrd()"></p>
+            </section>
+            </a>
+            <!--Flip Button-->
+            <a href="#">
+            <section class="pgBtn center margin" onclick="flipWrd()">
+                <p class="p" id="prev" >Flip</p>
+            </section>
+            </a>
+            <!--Next button-->
+            <a href="#">
+            <section class="pgBtn center margin" id="nextWord">
+                <p id="prev" onclick="nxtWrd()"></p>
+            </section>
+                </a>
+        </section>
+        <!--Flip Control Section End-->
+
+        <!--Language Selection Start-->
+            <section class="center margin" id="swapLangBtn">
+                <!--Language Taget List 1-->
+                <select id="target1" onchange="setList(this)">  
+                    <option value="English">English</option>
+                    <option value="Spanish">Spanish</option>
+                </select>&nbsp;
+                <!--Target Language List swap button-->
+                    <input type="button" id="swapBtn" value="<=>" onclick="swapTargets()">&nbsp;
+                <!--Language Taget List 2-->
+                <select id="target2" onchange="setList(this)">
+                <option value="English">English</option>
+                <option value="Spanish">Spanish</option>
+                </select>&nbsp;
+            </section>
+        <!--Language Selection End-->
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
