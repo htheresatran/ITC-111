@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Age Check!</title>
+    <link rel="icon" href="logo.png">
+    <style>
+    .container {
+    background-color: #a470e9;
+    margin: auto;
+    border: 10px #000 solid;
+    width: 80%;
+    height: auto;
+    text-align: center;
+
+    }
+    body {
+    background-image: url(theresaPic.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 120%; 
+    }
+    #title {
+    color:white;
+    font-family: "Black Han Sans", san-serif;
+    text-align: center;
+    font-size: 100px;
+    text-shadow: 2px 0 0 rgb(5, 38, 27), -2px 0 0 rgb(5, 38, 27), 0 2px 0 rgb(5, 38, 27), 0 -2px 0 rgb(5, 38, 27),
+        1px 1px rgb(5, 38, 27), -1px -1px 0 rgb(5, 38, 27), 1px -1px 0 rgb(5, 38, 27), -1px 1px 0 rgb(5, 38, 27);
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+      <div>
+        <h1 id="title">Age Verification Needed</h1>
+      </div>
+      <div class="container">
+
+      <p>This game is for mature audiences. <br>
+      Enter your age and click OK:</p>
+
+      <input id="id1" type="number" min="18" max="130" required>
+      <button onclick="myFunction()">OK</button>
+
+      <p>Users the age of 18 and under aren't permitted to play this game without the consent of an adult.</p>
+
+      <p id="val"></p>
+      </div>
+    </div>
+
+  <script>
+  function myFunction() {
+    var userAge = document.getElementById("id1");
+    if (!userAge.checkValidity()) {
+      document.getElementById("val").innerHTML = userAge.validationMessage;
+    } else {
+      document.getElementById("val").innerHTML = "You are of age to enjoy this game!";
+    } 
+  } 
+  </script>
+</body>
+</html>
